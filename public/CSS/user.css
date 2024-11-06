@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background: radial-gradient(circle, rgba(5,3,48,1) 0%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%);
+    background: radial-gradient(circle, rgba(5,3,48,1) 20%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%);
     position: relative; /* Position relative for the overlay */
     overflow: hidden; /* Prevent overflow from the overlay */
 }
@@ -12,7 +12,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.181); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.263); /* Semi-transparent black */
     z-index: 1; /* Ensure the overlay is above the background but below content */
 }
 
@@ -26,6 +26,20 @@ nav {
     margin-top: 20px; /* Marge supérieure pour le conteneur */
     position: relative; /* Position relative for z-index to work */
     z-index: 2; /* Ensure the container is above the overlay */
+}
+
+#intro {
+    padding: 1rem 40rem 2rem 40rem;
+    font-size: 1.1rem;
+        & #abyss {
+            font-style: italic;
+        }
+}
+
+#intro-2 {
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 #cards {
@@ -73,12 +87,12 @@ nav {
     font-family: "Syne Mono", monospace;
     font-size: 6rem;
     margin: 3rem 0;
-    color: rgba(255, 255, 255, 0.773); /* Set the text color to white */
-    text-shadow: 
+    color: rgba(255, 255, 255, 0.862); /* Set the text color to white */
+    /* text-shadow: 
         0 0 5px rgba(255, 255, 255, 0.14),
         0 0 10px rgba(255, 255, 255, 0.5), 
         0 0 15px rgba(255, 255, 255, 0.227), 
-        0 0 20px rgba(255, 255, 255, 0.2);
+        0 0 20px rgba(255, 255, 255, 0.2); */
 }
 
 
@@ -96,5 +110,10 @@ nav {
 }
 
 footer {
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.16); /* Semi-transparent black background */
+}
+
+footer p {
+    opacity: .6; /* Ensure the text is fully opaque */
+    color: rgba(255, 255, 255, 0.773); /* Set the text color to white for better visibility */
 }

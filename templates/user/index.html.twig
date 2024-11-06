@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Abyss Protocol - Players{% endblock %}
+{% block title %}Abyss Protocol - Characters{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('CSS/user.css') }}">
@@ -9,7 +9,13 @@
 
 {% block body %}
     <div id="container">
-        <h1 id="title">Players</h1>
+        <h1 id="title">CHARACTERS</h1>
+        <p id="intro">
+            In <span id="abyss">Abyss Protocol</span>, players become part of an elite team navigating a dystopian future where technology and terror intertwine. Each character brings unique skills and backgrounds, from the tech-savvy Kade and the enigmatic Orion, to the agile Jax and the psychic Lyra. Together, they confront the dark and chaotic world controlled by the Corrupted Overlord, Zephyr, striving to uncover secrets and survive amidst the technological horrors that lurk in the shadows.
+        </p>
+        <p id="intro-2">
+            Who will you become in this unforgiving world? The choice is yours.
+        </p>
         <div id="cards">
             {% for user in users %}
                 <div id="card">
@@ -21,7 +27,7 @@
                     </p>
                     <ul id="list">
                         <li>
-                            <span class="cat">Level:</span>                     
+                            <span class="cat">Starter level:</span>                     
                             <span class="level">
                                 {% if user.xp < 150 %}
                                     Void Wanderer <span class="italic">({{ user.xp }}xp)</span>
