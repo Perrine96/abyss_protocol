@@ -1,0 +1,100 @@
+body {
+    text-align: center;
+    background: radial-gradient(circle, rgba(5,3,48,1) 0%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%);
+    position: relative; /* Position relative for the overlay */
+    overflow: hidden; /* Prevent overflow from the overlay */
+}
+
+body::before {
+    content: '';
+    position: absolute; /* Position the overlay absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.181); /* Semi-transparent black */
+    z-index: 1; /* Ensure the overlay is above the background but below content */
+}
+
+nav {
+    background-color: transparent;
+    z-index: 2; /* Ensure the nav is above the overlay */
+    position: relative; /* Position relative for z-index to work */
+}
+
+#container {
+    margin-top: 20px; /* Marge supérieure pour le conteneur */
+    position: relative; /* Position relative for z-index to work */
+    z-index: 2; /* Ensure the container is above the overlay */
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 3rem 2rem;
+}
+
+#card {
+    border-radius: 0.5rem; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.608); /* Ombre légère */
+    transition: transform 0.2s; /* Transition pour l'effet de survol */
+    padding: 2.5rem; /* Espacement intérieur de la carte */
+    background: rgba(0, 0, 0, 0.181); /* Semi-transparent black */
+        & #type {
+            color: rgb(125, 13, 20);
+            font-size: 1.2rem;
+        }
+}
+
+#card:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+}
+
+#card-title {
+    font-size: 1.7rem; /* Adjust the font size as needed */
+    color: rgba(255, 255, 255, 0.753); /* Set the text color to white */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.038), /* Soft white glow */
+        0 0 10px rgba(255, 255, 255, 0.228), /* Medium white glow */
+        0 0 15px rgba(255, 255, 255, 0.07), /* Stronger white glow */
+        0 0 20px rgba(255, 255, 255, 0.2); /* Faint white glow */
+}
+
+#type {
+    font-size: 0.9rem; /* Taille de la police des badges */
+    padding: 0.5em; /* Espacement intérieur des badges */
+    font-style: italic;
+}
+
+#title {
+    font-family: "Syne Mono", monospace;
+    font-size: 6rem;
+    margin: 3rem 0;
+    color: rgba(255, 255, 255, 0.773); /* Set the text color to white */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.14),
+        0 0 10px rgba(255, 255, 255, 0.5), 
+        0 0 15px rgba(255, 255, 255, 0.227), 
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+#list {
+    & li {
+        list-style-type: none;
+        padding: .4rem;
+            & .italic {
+                font-style: italic;
+            }
+            & .cat {
+                text-decoration: underline;
+            }
+    }
+}
+
+footer {
+    opacity: 0.5;
+}

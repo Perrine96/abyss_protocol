@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Abyss Protocol - Players{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('CSS/user.css') }}">
+{% endblock %}
+
+
+{% block body %}
+    <div id="container">
+        <h1 id="title">Players</h1>
+        <div id="cards">
+            {% for user in users %}
+                <div id="card">
+                    <h5 id="card-title">
+                        {{ user.name|capitalize }}
+                    </h5>
+                    <p id="type">
+                        {{ user.type|title }}
+                    </p>
+                    <ul id="list">
+                        <li>
+                            <span class="cat">Level:</span>                     
+                            <span class="level">
+                                {% if user.xp < 150 %}
+                                    Void Wanderer <span class="italic">({{ user.xp }}xp)</span>
+                                {% elseif user.xp > 150 and user.xp < 400 %}
+                                    Cyber Wraith <span class="italic">({{ user.xp }}xp)</span>
+                                {% else %}
+                                    Abyss Reaper <span class="italic">({{ user.xp }}xp)</span>
+                                {% endif %}
+                            </span>
+                        </li>
+                        <li>
+                            <span class="cat">Gender:</span> {{ user.gender|title }}
+                        </li>
+                        <li><span class="cat">Category:</span> {{ user.category|title }}</li>
+                        <li><span class="cat">Function:</span> {{ user.function|capitalize }}</li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

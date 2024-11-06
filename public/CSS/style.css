@@ -1,0 +1,67 @@
+/* OVERVIEW */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gugi", sans-serif;
+}
+
+body {
+    background-color: rgb(19, 19, 20);
+    color: rgb(207, 200, 200);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* NAV */
+nav {
+    background-color: rgb(0, 0, 0); /* Couleur de fond de la barre de navigation */
+    padding: 0 1rem;
+    height: 7vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    /* gap: 6rem; */
+}
+
+nav ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    display: flex; /* Affiche les éléments de la liste en ligne */
+    justify-content: space-around; /* Espace égal entre les éléments */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
+
+nav ul li a {
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Souligne le lien au survol */
+}
+
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    background-color: rgb(0, 0, 0);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p {
+        color: #434246;
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
