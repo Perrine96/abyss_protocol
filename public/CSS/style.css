@@ -16,10 +16,21 @@ body {
     /* overflow: auto; */
 }
 
+body::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.263); 
+    z-index: -5; 
+}
+
 
 /* NAV */
 nav {
-    background-color: rgb(0, 0, 0); /* Couleur de fond de la barre de navigation */
+    background-color: transparent;
     padding: 0 1rem;
     height: 7vh;
     display: flex;
@@ -55,7 +66,7 @@ nav ul li a:hover {
 /* FOOTER */
 footer {
     margin-top: auto;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.16); /* Semi-transparent black background */
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -67,4 +78,9 @@ footer {
             color: inherit;
         }
     }
+}
+
+footer p {
+    opacity: .6; /* Ensure the text is fully opaque */
+    color: rgba(255, 255, 255, 0.773); /* Set the text color to white for better visibility */
 }

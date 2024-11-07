@@ -2,11 +2,11 @@ body {
     text-align: center;
     /* background: radial-gradient(circle, rgba(5,3,48,1) 20%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%); */
     background: radial-gradient(circle, rgba(143,66,4,1) 0%, rgba(107,11,39,1) 34%, rgba(5,3,48,1) 100%);
-    position: relative; /* Position relative for the overlay */
-    overflow: hidden; /* Prevent overflow from the overlay */
+    /* position: relative; 
+    overflow: hidden;  */
 }
 
-body::before {
+/* body::before {
     content: '';
     position: absolute; 
     top: 0;
@@ -15,7 +15,7 @@ body::before {
     bottom: 0;
     background: rgba(0, 0, 0, 0.263); 
     z-index: 1; 
-}
+} */
 
 nav {
     background-color: transparent;
@@ -110,11 +110,11 @@ nav {
     }
 }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.16); /* Semi-transparent black background */
+/* footer {
+    background-color: rgba(0, 0, 0, 0.16); 
 }
 
 footer p {
-    opacity: .6; /* Ensure the text is fully opaque */
-    color: rgba(255, 255, 255, 0.773); /* Set the text color to white for better visibility */
-}
+    opacity: .6;
+    color: rgba(255, 255, 255, 0.773);
+} */
