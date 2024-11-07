@@ -1,19 +1,20 @@
 body {
     text-align: center;
-    background: radial-gradient(circle, rgba(5,3,48,1) 20%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%);
+    /* background: radial-gradient(circle, rgba(5,3,48,1) 20%, rgba(107,11,39,1) 100%, rgba(119,12,25,1) 100%); */
+    background: radial-gradient(circle, rgba(143,66,4,1) 0%, rgba(107,11,39,1) 34%, rgba(5,3,48,1) 100%);
     position: relative; /* Position relative for the overlay */
     overflow: hidden; /* Prevent overflow from the overlay */
 }
 
 body::before {
     content: '';
-    position: absolute; /* Position the overlay absolutely */
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.263); /* Semi-transparent black */
-    z-index: 1; /* Ensure the overlay is above the background but below content */
+    background: rgba(0, 0, 0, 0.263); 
+    z-index: 1; 
 }
 
 nav {
@@ -29,7 +30,7 @@ nav {
 }
 
 #intro {
-    padding: 1rem 40rem 2rem 40rem;
+    padding: 1rem 4rem 2rem 4rem;
     font-size: 1.1rem;
         & #abyss {
             font-style: italic;
